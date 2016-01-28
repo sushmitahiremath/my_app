@@ -21,16 +21,17 @@
     </style>
   </head>
   <body>
-    <div id="map"></div><br>
-    <div id="map1"></div>
-    <script>
+<!--     <div id="map"></div><br>
+ -->    <div id="map1"></div>
+
+<script>
 
 function initMap() {
   var myLatLng = {lat: 15.4630841, lng:74.9626462};
   var myLatLng1 = {lat:15.135277 , lng:75.135277 };
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 5,
+    zoom: 12,
     center: myLatLng
   });
 
@@ -50,20 +51,20 @@ function initMap() {
 
 
     <!-- shows directions -->
-<script type="text/javascript">
+<script type="text/plain">
   function initMap() {
   var chicago = {lat: 41.85, lng: -87.65};
   var indianapolis = {lat: 39.79, lng: -86.14};
-  var current_loc = {lat: "n1", lng: "n2"};
+  
 
-  var map = new google.maps.Map(document.getElementById('map1'), {
+  var map1 = new google.maps.Map(document.getElementById('map1'), {
     center: chicago,
     scrollwheel: false,
     zoom: 7
   });
 
   var directionsDisplay = new google.maps.DirectionsRenderer({
-    map: map
+    map: map1
   });
 
   // Set destination, origin and travel mode.
@@ -71,7 +72,7 @@ function initMap() {
     destination: indianapolis,
     origin: chicago,
     travelMode: google.maps.TravelMode.DRIVING
-  };
+  }
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOjcEMbkMiEhY0pt33-hlPECinjazQBro&signed_in=true&callback=initMap"></script>
